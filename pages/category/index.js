@@ -38,5 +38,11 @@ Page({
     this.setData({
       curIndex:index
     });
+  },
+  showListView:function(e) {
+   let txt =  e.currentTarget.dataset.txt;
+   wx.navigateTo({
+     url: '/pages/list/index?title='+txt,
+   })
   }
 })
